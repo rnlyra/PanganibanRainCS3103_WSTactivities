@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
@@ -14,66 +14,176 @@ body {
 }
 
 .vision-board {
-    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    background-color: #E7CCCC;
+    border-radius: 30px;
     text-align: center;
 }
 
 h1 {
-    color: #d85d85;
+    font-family: 'Georgia', serif;
+    color: #A02334;
+    margin-top: 20px; 
 }
 
-.reminder {
-    background-color: #f7d1d1;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.images-container {
+.main-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-wrap: wrap; 
 }
 
-.images-container img {
-    width: 30%;
-    border-radius: 8px;
+.left-column {
+    flex: 1 1 40%; 
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.daily-reminder {
+    background-color: #96a378;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.daily-reminder p:first-child {
+    font-weight: bold; 
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.daily-reminder p:last-child {
+    font-family: 'Fuzzy Bubbles', cursive; 
+    color: #ffff
+}
+
+.goals-image-container {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px;
 }
 
 .goals {
-    background-color: #fff0f5;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background-color: #cc6d6d;
+    padding: 7px; 
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center; 
+    margin-right: 10px; 
+    flex: 1; 
 }
 
 .goals h2 {
-    margin-bottom: 10px;
-    color: #d85d85;
+    color: #ffff; 
+    margin-bottom: 10px; 
 }
 
 .goals ul {
-    list-style-type: none;
+    list-style-type: none; 
+    padding: 0; 
+    text-align: left;
 }
 
-.goals li {
-    margin-bottom: 8px;
+.goals ul li {
+    position: relative; 
+    padding-left: 30px; 
+    color:#ffff;
+    font-family: 'Fuzzy Bubbles', cursive;
     font-size: 14px;
 }
 
-.quote {
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 20px;
+.goals ul li::before {
+    content: '🍰'; 
+    position: absolute;
+    left: 0; 
+    
 }
 
-.song {
-    font-size: 14px;
-    color: #888;
+.image-box {
+    flex: 0 0 120px; 
+    background-color: #f0f0f0;
+    border-radius: 12px;
 }
+
+.goal-image {
+    width: 100%; 
+    height: auto;
+    border-radius: 12px;
+}
+
+.spotify-song {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.right-column {
+    flex: 1 1 60%; 
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px; 
+}
+
+.image-box {
+    flex: 1; 
+    max-width: calc(33.333% - 10px); 
+    background-color: #f0f0f0;
+    border-radius: 12px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .left-column,
+    .right-column {
+        flex: 1 1 100%; 
+    }
+
+    .goals-image-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .goals {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+        width: 100%;
+    }
+
+    .image-box {
+        max-width: 90%; 
+    }
+
+    .image-row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .daily-reminder,
+    .goals,
+    .spotify-song {
+        padding: 10px; 
+    }
+
+    .goals {
+        font-size: 12px; 
+    }
+
+    .vision-board {
+        padding: 10px; 
+    }
+}
+
