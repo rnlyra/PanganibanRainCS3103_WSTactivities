@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Delius&family=Dynalight&family=Ms+Madi&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.3s ease;
+    background-color: whitesmoke;
+}
+
+
+header {
+    text-align: center;
+    margin: 60px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: 'Bricolage Grotesque', cursive;
+    color: #FF4E88;
+}
+
+header .subtitle {
+    font-size: 1.5rem; 
+    margin-bottom: 10px;
+    font-family: "Dynalight", cursive;
+}
+
+.theme-btn {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: none;
+    background: #FF8C9E;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-btn:hover {
+    background: #FF4E88;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 60px 0 60px;
+}
+
+.box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF4E88;
+}
+
+h2 i {
+    margin-right: 8px;
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #f57f17;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f0c711;
+}
+
+aside.fun-facts {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #FF4E88;
+    border-style: dashed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease;
+    margin: 20px auto; /* Centers the element */
+    width: 400px;  /* Set a fixed width */
+}
+
+aside h3 {
+    color: #f57f17;
+    margin-bottom: 10px;
+}
+
+aside button {
+    padding: 10px 15px;
+    background: #FF8C9E;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+aside button:hover {
+    background: #FF4E88;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #2e2e2e, #1e1e1e);
+    color: #FF8C9E;
+}
+
+body.dark-mode .box {
+    background: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .theme-btn {
+    background: #f1f1f1;
+    color: #333;
+}
+
+aside.dark-mode .fun-facts {
+    color: #FF4E88;
+    
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
